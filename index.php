@@ -1,22 +1,15 @@
 <?php
 $names = ["Андрей", "Миша", "Оля", "Ира", "Саша", "Дима", "Катя", "Влад", "Юля", "Назар"];
+
+echo "<ul>";
+
+$i = 0; // стартовый индекс (первый элемент массива)
+
+while ($i < count($names)) {
+    // пока индекс меньше количества элементов — цикл работает
+    echo "<li>{$names[$i]}</li>";
+    $i++; // ОБЯЗАТЕЛЬНО увеличиваем индекс, иначе будет бесконечный цикл
+}
+
+echo "</ul>";
 ?>
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Список имён</title>
-</head>
-<body>
-
-<h1>Список имён</h1>
-
-<ul>
-  <?php foreach ($names as $name): ?>
-    <li><?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?></li>
-  <?php endforeach; ?>
-</ul>
-
-</body>
-</html>
-
