@@ -1,11 +1,10 @@
 <?php
 $names = ["Андрей", "Миша", "Оля", "Ира", "Саша", "Дима", "Катя", "Влад", "Юля", "Назар"];
+$keys = array_rand($names,5);
+$i = 0;
+while($i < count($keys)){
+$key = $names[$keys[$i]];
+echo $key . "\n";
+$i++;
+};
 
-echo "<ul>";
-
-for ($i = count($names) - 1; $i >=0 ; $i-=2) {
-    echo "<li>{$names[$i]}</li>";
-}
-
-echo "</ul>";
-?>
